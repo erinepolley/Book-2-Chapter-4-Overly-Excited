@@ -10,10 +10,24 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
 
 let buildMeUp = ""
 
-const addExcitement = (wordArray) => {
+// const addExcitement = (wordArray) => {
+//     for (let i = 0; i < wordArray.length; i++) {
+//         if ((i + 1) % 3 === 0) {
+//             buildMeUp += wordArray[i] + "!";
+//             console.log(buildMeUp);
+//         } else {
+//             buildMeUp += wordArray[i] + " ";
+//             console.log(buildMeUp);
+//         }
+//     }
+// }
+
+// addExcitement(sentence);
+
+const addExcitement = (wordArray, punct) => {
     for (let i = 0; i < wordArray.length; i++) {
         if ((i + 1) % 3 === 0) {
-            buildMeUp += wordArray[i] + "!";
+            buildMeUp += wordArray[i] + punct + " ";
             console.log(buildMeUp);
         } else {
             buildMeUp += wordArray[i] + " ";
@@ -22,4 +36,4 @@ const addExcitement = (wordArray) => {
     }
 }
 
-addExcitement(sentence);
+addExcitement(sentence, "!!!");
